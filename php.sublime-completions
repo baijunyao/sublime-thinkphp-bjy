@@ -194,11 +194,12 @@
 		{ "trigger": "alias()", "contents": "->alias('${1:}')$0" },
 		{ "trigger": "join()", "contents": "->join('${1:}')$0" },
 		{ "trigger": "where()", "contents": "->where(array('${1:key}'=>${2:value}))$0" },
-		{ "trigger": "find()", "contents": "->find();$0" },
+		{ "trigger": "wheremap", "contents": "->where(\\$map)\n$0" },
+		{ "trigger": "find()", "contents": "->find();\n$0" },
 		{ "trigger": "group()", "contents": "->group('${1:}')$0" },
 		{ "trigger": "order()", "contents": "->order('${1:}')$0" },
 		{ "trigger": "limit()", "contents": "->limit(${1:})$0" },
-		{ "trigger": "select()", "contents": "->select();$0" },
+		{ "trigger": "select()", "contents": "->select();\n$0" },
 
 		{ "trigger": "->getField", "contents": "->getField(${1:\\$field},${2:\\$value});$0" },
 
@@ -223,19 +224,6 @@
 		{ "trigger": "add", "contents": "->add(${1:\\$data})$0" },
 		{ "trigger": "addData", "contents": "->addData(${1:\\$data})$0" },
 		{ "trigger": "editData", "contents": "->editData(${1:\\$map},${2:\\$data})$0" },
-		{ "trigger": "getDataBy", "contents": "->getDataBy${1:id}(${2:\\$id});$0" },
-
-
-
-
-
-
-
-
-
-
-
-
-
+		{ "trigger": "getDataBy", "contents": "->getDataBy${1:id}(${2:\\$id});$0" }
 	]
 }
