@@ -169,6 +169,7 @@
 
 		// 控制器类操作
 		{ "trigger": "dump", "contents": "dump('${1:$data}')$0" },
+		{ "trigger": "ajax_return", "contents": "ajax_return(${1:\\$data},${2:'error_code'},'${3:error_message}');$0" },
 		{ "trigger": "error", "contents": "\\$this->error('${1:name}');$0" },
 		{ "trigger": "success", "contents": "\\$this->success('${1:info}',U('${2:}'));$0" },
 		{ "trigger": "->ajaxReturn", "contents": "->ajaxReturn(${1:\\$data},${2:\\$info},${3:\\$status},${4:\\$type})$0" },
@@ -179,6 +180,7 @@
 		{ "trigger": "dis", "contents": "\\$this->display();$0" },
 		{ "trigger": "ass", "contents": "\\$assign=array(\n\t'${1:data}'=>\\$${2:data}\n\t);\n\\$this->assign(\\$assign);$0" },
 		{ "trigger": "p", "contents": "p(\\$${1:data});${2:die;}$0" },
+		{ "trigger": "c", "contents": "C('${1:configlName}','${2:value}');$0" },
 		{ "trigger": "d", "contents": "D('${1:modelName}')${2:->};$0" },
 		{ "trigger": "m", "contents": "M('${1:tableName}')${2:->};$0" },
 		{ "trigger": "di", "contents": "die;$0" },
