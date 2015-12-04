@@ -60,7 +60,9 @@
 		"LANG_SET",
 		"MAGIC_QUOTES_GPC",
 		"APP_STATUS",
-		//项目中C函数默认获取到的所有配置键名
+		// 自定义常量
+		"IS_APP",
+		//项目中C函数默认获取到的配置键名
 		"APP_FILE_CASE",
 		"APP_AUTOLOAD_PATH",
 		"APP_TAGS_ON",
@@ -169,7 +171,7 @@
 
 		// 控制器类操作
 		{ "trigger": "dump", "contents": "dump('${1:$data}')$0" },
-		{ "trigger": "ajax_return", "contents": "ajax_return(${1:\\$data},${2:'error_code'},'${3:error_message}');$0" },
+		{ "trigger": "ajax_return", "contents": "ajax_return(${1:\\$data},'${2:error_message}',${3:'error_code'});$0" },
 		{ "trigger": "error", "contents": "\\$this->error('${1:name}');$0" },
 		{ "trigger": "success", "contents": "\\$this->success('${1:info}',U('${2:}'));$0" },
 		{ "trigger": "->ajaxReturn", "contents": "->ajaxReturn(${1:\\$data},${2:\\$info},${3:\\$status},${4:\\$type})$0" },
