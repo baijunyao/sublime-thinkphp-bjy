@@ -40,6 +40,6 @@
 		{ "trigger": "php", "contents": "<php>${1:p(\\$${2:data})}</php>$0" },
 		{ "trigger": "table", "contents": "<table class=\"table table-striped table-bordered table-hover table-condensed\">\n\t$1\n</table> " },
 		{ "trigger": "css", "contents": "<css file=\"${1:__HOME_CSS__}/${2:fileName}.css\" />$0" },
-		{ "trigger": "js", "contents": "<js file=\"${1:__HOME_CSS__}/${2:fileName}.js\" />$0" },
+		{ "trigger": "js", "contents": "<js file=\"${1:__HOME_JS__}/${2:fileName}.js\" />$0" },
 	]
 }
