@@ -191,6 +191,7 @@
 		{ "trigger": "post", "contents": "if(IS_POST){\n\t${1:}\n}else{\n\t${2:}\n\t\\$this->display();\n}" },
 		{ "trigger": "app", "contents": "if(IS_APP){\n\tajax_return(${2:\\$data},'${3:error_message}',${4:'error_code'});\n}else{\n\t${5:}\n}"},
 		{ "trigger": "i", "contents": "I('${1:}')$0" },
+		{ "trigger": "pa", "contents": "p(\\$assign);${2:die;}$0" },
 		{ "trigger": "pp", "contents": "p(\\$_POST);${2:die;}$0" },
 		{ "trigger": "ps", "contents": "p(\\$_SESSION);${2:die;}$0" },
 		// 模型类操作
