@@ -188,6 +188,8 @@
 		{ "trigger": "redirect", "contents": "redirect(${1:\\$url}${2:,\\$time}${3:,\\$msg})$0" },
 		{ "trigger": "pub", "contents": "/**\n * ${1:ActionName}\n */\npublic function ${2:index}(){\n\t$3\n\t\\$this->display();\n}$0" },
 		{ "trigger": "post", "contents": "if(IS_POST){\n\t${1:}\n}else{\n\t${2:}\n\t\\$this->display();\n}" },
+		{ "trigger": "check_login", "contents": "// 如果没有登录 \nif(!check_login()){\n\t${1:}\n}" },
+		{ "trigger": "is_student", "contents": "// 如果不是学霸 \nif(!is_student(${1:\\$uid})){\n\t${2:}\n}" },
 		{ "trigger": "app", "contents": "if(IS_APP){\n\tajax_return(${2:\\$data},'${3:error_message}',${4:'error_code'});\n}else{\n\t${5:}\n}"},
 		{ "trigger": "i", "contents": "I('${1:}')$0" },
 		{ "trigger": "pa", "contents": "p(\\$assign);${2:die;}$0" },
@@ -208,7 +210,7 @@
 
 		{ "trigger": "->getBy", "contents": "->getBy${1:Field}('${2:value}');$0" },
 		{ "trigger": "->getField", "contents": "->getField('${1:field}'${2:,true});$0" },
-		{ "trigger": "->getFieldBy", "contents": "->getFieldBy${1:Field}(${2:\\$id},'${3:\\$value}');$0" },
+		{ "trigger": "->getFieldBy", "contents": "->getFieldBy${1:Field}(${2:\\$id},'${3:value}');$0" },
 
 		{ "trigger": "count()", "contents": "->count();$0" },
 		{ "trigger": "max()", "contents": "->max();$0" },
