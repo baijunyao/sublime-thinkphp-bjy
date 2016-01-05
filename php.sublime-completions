@@ -169,7 +169,7 @@
 		// 其他
 
 		// 控制器类操作
-		{ "trigger": "dump", "contents": "dump(${1:\\$data});die;$0" },
+		{ "trigger": "dump", "contents": "dump(${1:\\$data});${2:die;}$0" },
 		{ "trigger": "ajax_return", "contents": "ajax_return(${1:\\$data},'${2:error_message}',${3:'error_code'});$0" },
 		{ "trigger": "error", "contents": "\\$this->error('${1:name}');$0" },
 		{ "trigger": "success", "contents": "\\$this->success('${1:info}',U('${2:}'));$0" },
@@ -187,6 +187,7 @@
 		{ "trigger": "di", "contents": "die;$0" },
 		{ "trigger": "redirect", "contents": "redirect(${1:\\$url}${2:,\\$time}${3:,\\$msg})$0" },
 		{ "trigger": "pub", "contents": "/**\n * ${1:ActionName}\n */\npublic function ${2:index}(){\n\t$3\n\t\\$this->display();\n}$0" },
+		{ "trigger": "map", "contents": "// 组合where数组条件\n\\$map=array(\n\t'${1:id}'=>\\$${2:id}\n\t);\n$0" },
 		{ "trigger": "post", "contents": "if(IS_POST){\n\t${1:}\n}else{\n\t${2:}\n\t\\$this->display();\n}" },
 		{ "trigger": "check_login", "contents": "// 如果没有登录 \nif(!check_login()){\n\t${1:}\n}" },
 		{ "trigger": "is_student", "contents": "// 如果不是学霸 \nif(!is_student(${1:\\$uid})){\n\t${2:}\n}" },
@@ -232,7 +233,7 @@
 		{ "trigger": "m_auto", "contents": "// 自动完成\nprotected \\$_auto=array(\n	array('status',1),  // 新增的时候把status字段设置为1\n	array('password','md5',1,'function') , // 对password字段在新增的时候使md5函数处理\n	array('name','getName',1,'callback'), // 对name字段在新增的时候回调getName方法\n	array('date','time',1,'function'), // 对date字段在新增的时候写入当前时间戳\n);$0" },
 
 		{ "trigger": "create", "contents": "// 对data数据进行验证\nif(!\\$data=\\$this->create(\\$data)){\n\t// 验证不通过返回错误\n\treturn false;\n}else{\n\t// 验证通过\n\t$1\n}$0" },
-		{ "trigger": "result", "contents": "if(!\\$result){\n\t// 操作成功\n\t\\$this->success('${1:info}',U('${2:}'));$0\n}else{\n\t// 操作失败\n\t\\$this->error('${3:name}');\n}$0" },
+		{ "trigger": "result", "contents": "if(\\$result){\n\t// 操作成功\n\t\\$this->success('${1:info}',U('${2:}'));$0\n}else{\n\t// 操作失败\n\t\\$this->error('${3:name}');\n}$0" },
 		{ "trigger": "->add", "contents": "->add(${1:\\$data});$0" },
 		{ "trigger": "->addData", "contents": "->addData(${1:\\$data});$0"},
 		{ "trigger": "->editData", "contents": "->editData(${1:\\$map},${2:\\$data});$0" },
