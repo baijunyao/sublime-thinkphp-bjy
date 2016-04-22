@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "packages": [
+  {
+    "name": "thinkphp 代码块",
+    "description": "快速生成thinkphp常用的代码块",
+    "author": "白俊遥",
+    "homepage": "https://github.com/shuaibai/sublime-thinkphp-bjy",
+    "last_modified": "2016-4-22",
+    "platforms": {
+      "*": [
+          {
+            "version": "1.0",
+            "url": "https://github.com/shuaibai/sublime-thinkphp-bjy"
+          }
+        ]
+      }
+    }
+  ]
+}
