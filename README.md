@@ -2,12 +2,12 @@
 此插件是为sublime快速生成thinkphp的代码块而开发的；其实甚至称不上是插件；只是就是2个文件；如果你用sublime做thinkphp开发；那么看到此插件；你绝对有种相见恨晚的感觉；更甚至；只要你是sublime的用户；都会感激流涕的；
 
 ## 使用示例
-控制器：
-![controller](http://statics.baijunyao.com/images/github/controller.gif)
-模型：
-![controller](http://statics.baijunyao.com/images/github/model.gif)
-视图：
-![controller](http://statics.baijunyao.com/images/github/view.gif)
+控制器 controller：<br />
+![controller](http://statics.baijunyao.com/images/github/controller.gif) <br />
+模型 model： <br />
+![controller](http://statics.baijunyao.com/images/github/model.gif) <br />
+视图 view： <br />
+![controller](http://statics.baijunyao.com/images/github/view.gif) <br />
 
 ## 安装方法
 ![controller](http://statics.baijunyao.com/images/github/packages.png)<br />
